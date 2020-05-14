@@ -9,7 +9,8 @@ export const descriptionHandler = (baseUrl: string): RequestHandler => {
       <Tags>example web</Tags>
       <Contact>admin@example.com</Contact>
       <Url type="application/rss+xml"
-        template="${baseUrl}/search?phrase={searchTerms}&amp;page={startPage?}&amp;format=rss"/>
+        indexOffset="0"
+        template="${baseUrl}/search?phrase={searchTerms}&amp;skip={startIndex?}&amp;size={count?}"/>
       <Url type="application/opensearchdescription+xml"
         rel="self"
         template="${baseUrl}/description" />

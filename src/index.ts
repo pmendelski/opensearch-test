@@ -7,8 +7,8 @@ const app = express();
 const port = config.port;
 
 app.use(logger());
-app.get("/description", descriptionHandler(config.baseUrl));
-app.get("/search", searchHandler(config.baseUrl));
+app.get('/description', descriptionHandler(config.baseUrl));
+app.get('/search', searchHandler(config.baseUrl));
 app.all('*', (_, res) => {
   res
     .status(404)
